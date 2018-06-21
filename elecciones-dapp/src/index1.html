@@ -25,28 +25,41 @@
 }
     </style>
     
+
   </head>
   <body background="images/fondo-slide-1_2_0.jpg">
     <div class="container" style="width: 650px;">
       <div class="row">
         <div class="col-lg-12">
           <img src="images/logo.png" class="center" style="height: 400px;"/>
-          <h4 class="text-center">LOGIN</h4>
+          <h4 class="text-center">Con tecnologia Blockchain</h4>
           <hr/>
           <br/>
-          <div id="content" >
-            <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">ID</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su Hash ID">
-                  <small id="emailHelp" class="form-text text-muted">No compartiremos tus datos con nadie.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <a href="index1.html" class="btn btn-primary">Aceptar</a>
-              </form>
+          <div id="loader">
+            <p class="text-center">Cargando...</p>
+          </div>
+          <div id="content" style="display: none;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Candidato</th>
+                  <th scope="col">Votos</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+            <hr/>
+            <form onSubmit="App.castVote(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect">Seleccionar candidato</label>
+                <select class="form-control" id="candidatesSelect">
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Votar</button>
+              <hr />
+            </form>
             <p id="accountAddress" class="text-center"></p>
           </div>
         </div>
@@ -57,6 +70,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

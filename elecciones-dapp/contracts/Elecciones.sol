@@ -27,6 +27,7 @@ contract Elecciones {
         addCandidato("PPK");
         addCandidato("Keiko");
         addCandidato("Alan");
+        addCandidato("Voto en blanco");
     }
 
     //Nos permite contabilizar la cantidad de candidatos y agregarlos
