@@ -1,0 +1,56 @@
+<?php?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elecciones Blockchain</title>
+    <link rel="shortcut icon" href="images/block.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/material.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">  
+  </head>
+  <body>
+    <div class="js-fondo"></div>
+    <section>
+        <div class="mdl-card mdl-card--election">
+            <div class="mdl-card__title">
+                <img src="images/logo.png"/>
+                <h3 class="text-center">Registrese</h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <form action="http://localhost:8080/elecciones/controlador/C_Usuario.php?op=guardar" method="POST">
+                  <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="int" class="form-control" name="DNI" id="dni" placeholder="Ingrese su DNI">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
+                  </div>
+                  <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                  </div>
+                  <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Apellidos">
+                  </div>
+                  <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input type="text" class="form-control" name="correo" id="correo" placeholder="Correo">
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Aceptar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <p id="accountAddress" class="text-center"></p>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/material.min.js"></script>
+  </body>
+</html>

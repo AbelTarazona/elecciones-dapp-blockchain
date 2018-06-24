@@ -1,0 +1,80 @@
+body{
+	background-color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+    overflow-y: scroll;
+}
+section{
+	position: relative;
+	padding: 40px 20px;
+}
+.js-button-defult{
+	width: 100%;
+	background-color: #7e8f9f !important;
+	color: #FFFFFF;
+	font-weight: 600;
+}
+.js-fondo{
+	background: url(../images/fondo-slide-1_2_0.jpg);
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+.js-container--login{
+	height: 100vh;
+	width: 100%;
+	max-width: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+.mdl-card{
+	width: 100%;
+	max-width: 360px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.mdl-card.mdl-card--election{
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+}
+.mdl-card .mdl-card__title{
+	display: block;
+	text-align: center;
+}
+.mdl-card__supporting-text{
+	width: 100%;
+}
+.mdl-card .mdl-card__title img{
+	width: 100%;
+	max-width: 300px;
+}
+.mdl-card__actions{
+	padding: 0;
+}
+.mdl-card__actions a{
+	width: 100%;
+	background-color: #8A97A8 !important;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/*SCROLL*/
+::-webkit-scrollbar{
+	width: 3px;
+	height: 5px;
+}
+::-webkit-scrollbar-track{
+	background-color: transparent;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+	background-color: #AAAAAA;
+	border-radius: 10px;
+}
