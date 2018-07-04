@@ -59,9 +59,11 @@ App = {
     var electionInstance;
     var loader = $("#loader");
     var content = $("#content");
+    var mensaje = $("#mensajeVoto");
 
     loader.show();
     content.hide();
+    mensaje.hide();
 
     // Mostrar data de la cuenta
     web3.eth.getCoinbase(function(err, account) {
@@ -106,6 +108,7 @@ App = {
       }
       loader.hide();
       content.show();
+      mensaje.show();
     }).catch(function(error) {
       console.warn(error);
     });
@@ -118,6 +121,7 @@ App = {
     }).then(function(result) {
       // Wait for votes to update
       $("#content").hide();
+      $("#mensajeVoto").hide();
       $("#loader").show();
     }).catch(function(err) {
       console.error(err);
